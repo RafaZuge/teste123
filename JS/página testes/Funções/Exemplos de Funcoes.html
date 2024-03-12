@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funções</title>
+
+    <script>
+      function imprimeLista() {
+        document.write("<ul>");
+        for (count = 1; count <= 10; count++) {
+          document.write("<li>" + count + "</li>");
+        }
+        document.write("</ul>");
+      }
+    </script>
+
+    <!-- ---------------------------------------------------- -->
+
+    <script>
+      function dobro(valor) {
+        return valor * 2;
+      }
+    </script>
+
+    <!-- ---------------------------------------------------- -->
+
+    <script>
+      function abreAlerta() {
+        alert("Passei por cima do gato");
+      }
+    </script>
+
+    <!-- ---------------------------------------------------- -->
+
+    <script>
+      var over = 0;
+      var out = 0;
+      function contOver() {
+        over++;
+      }
+      function contOut() {
+        out++;
+      }
+      function imprimeAlerta() {
+        alert("Entradas:" + over + " Saidas:" + out);
+      }
+    </script>
+
+    <!-- ---------------------------------------------------- -->
+
+    <script>
+      // let x=20;
+      // let y=50;
+
+      function compara(x,y) {
+        if (x > y) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    </script>
+
+
+  </head>
+  <body>
+    <h1>Exemplos de Funções</h1>
+
+    <script>
+      imprimeLista();
+    </script>
+
+    <hr />
+
+    <script>
+      document.write(dobro(50));
+    </script>
+
+    <hr />
+
+    <img
+      id="exemplo1"
+      src="https://www.petz.com.br/blog/wp-content/uploads/2017/04/comportamento-dos-gatos-1.jpg"
+      width="100px"
+      height="100px"
+      onMouseOver="abreAlerta()"
+    />
+
+    <hr />
+
+    <img
+      onClick="imprimeAlerta()"
+      id="exemplo1"
+      src="https://www.hypeness.com.br/1/2022/08/04c3e60a-gato-zorro_d.jpg"
+      width="200px"
+      height="200px"
+      onMouseOver="contOver()"
+      onMouseOut="contOut()"
+    />
+
+    <hr />
+
+    <script>
+      document.write(compara(9,5));
+    </script>
+    
+  </body>
+</html>

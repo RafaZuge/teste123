@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #app {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+      padding: 8px 16px;
+      font-size: 14px;
+      margin: 8px;
+    }
+  </style>
+  <title>Operações em Arrays</title>
+</head>
+<body>
+  <div id="app">
+    <h2>Operações em Arrays</h2>
+
+    <p>Array inicial: ['Ana', 'Carlos', 'Maria', 'João']</p>
+
+    <button onclick="inserirNome()">Inserir 'Paulo' no final</button>
+    <button onclick="removerNome()">Remover 'Carlos'</button>
+    <button onclick="atualizarNome()">Atualizar 'Maria' para 'Mariana'</button>
+    <button onclick="inserirPedro()">Inserir 'Pedro' na segunda posição</button>
+
+    <h3>Resultado:</h3>
+    <div id="resultado"></div>
+  </div>
+
+  <script>
+    let nomes = ['Ana', 'Carlos', 'Maria', 'João'];
+
+    function exibirResultado() {
+      document.getElementById('resultado').innerText = "Array resultante: " + JSON.stringify(nomes);
+    }
+
+    function inserirNome() {
+      nomes.push('Paulo');
+      exibirResultado();
+    }
+
+    function removerNome() {
+      let indiceCarlos = nomes.indexOf('Carlos');
+      if (indiceCarlos !== -1) {
+        nomes.splice(indiceCarlos, 1);
+      }
+      exibirResultado();
+    }
+
+    function atualizarNome() {
+      let indiceMaria = nomes.indexOf('Maria');
+      if (indiceMaria !== -1) {
+        nomes[indiceMaria] = 'Mariana';
+      }
+      exibirResultado();
+    }
+
+    function inserirPedro() {
+      nomes.splice(1, 0, 'Pedro');
+      exibirResultado();
+    }
+  </script>
+</body>
+</html>

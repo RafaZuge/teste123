@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>If</title>
+  </head>
+  <body>
+    <h1>Situação do Aluno</h1>
+
+    N1: <input type="number" id="N1" value="" />
+     N2:<input type="number" id="N2" value="" />
+    <button onclick="situacao('N1', 'N2', 'resultado')">OK</button>
+    <p id="resultado"></p>
+
+    <script>
+      function situacao(entrada1, entrada2, saida) {
+        var x = Number(document.getElementById(entrada1).value);
+        var y = Number(document.getElementById(entrada2).value);
+        var media = (x + y) / 2;
+
+        document.getElementById(saida).innerHTML =
+          "O resultado é " + resultado(media);
+      }
+
+      // FUNÇÃO COM APENAS UM IF
+
+      // function resultado(m) {
+      //   var resultado;
+      //   if (m >= 7) {
+      //     resultado = "Aprovado";
+      //     resultado = resultado + ". Parabéns!!!";
+      //   }
+      //   return resultado;
+      // }
+
+      // FUNÇÃO COM DOIS IFS
+
+      function resultado(m) {
+        var resultado;
+        if (m >= 7) {
+          resultado = "Aprovado";
+        }
+        if (m < 7) {
+          resultado = "Reprovado";
+        }
+        return resultado;
+      }
+    </script>
+  </body>
+</html>

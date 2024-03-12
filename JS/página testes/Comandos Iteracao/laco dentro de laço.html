@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Laço dentro de Laço</title>
+  </head>
+  <body>
+    <h1>Cronômetro</h1>
+
+    <button onclick="tabuada()">OK</button>
+    <p id="resultado"></p>
+
+    <script>
+      function tabuada() {
+        var texto = "";
+        var i, j;
+
+        for (i = 1; i <= 10; i++) {
+          texto = texto + "-----------------------<br>";
+          texto = texto + "Tabuada de " + i + "<br>";
+          texto = texto + "-----------------------<br>";
+          for (j = 1; j <= 10; j++) {
+            texto = texto + (i + " x ") + (j + " = ") + i * j + "<br>";
+          }
+          texto = texto + "-----------------------<br>";
+        }
+
+        document.getElementById("resultado").innerHTML = texto;
+      }
+    </script>
+  </body>
+</html>

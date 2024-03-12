@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Do-While</title>
+  </head>
+  <body>
+    <h1>Sorteio</h1>
+
+    <button onclick="sorteio()">INICIAR</button>
+    <p id="resultado"></p>
+
+    <script>
+      function sorteio() {
+        var n = Math.floor(Math.random() * 10) + 1;
+        var num;
+        var contagem = 0;
+
+        do {
+          num = prompt("Escolha um número entre 1 e 10?");
+          contagem++;
+        } while (num != n);
+        document.getElementById("resultado").innerHTML =
+          "O número era " +
+          n +
+          ". Você acertou em " +
+          contagem +
+          " tentativas!!!";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <style>
+      body {
+        background: rgb(165, 189, 189);
+        color: white;
+        font: normal 18px arial;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Manipulando o DOM</h1>
+    <p>Olá</p>
+    <p>Aprendendo usar o <strong>DOM</strong> com JS</p>
+    <div id="msg">Clique aqui</div>
+
+    <script>
+      //maneira mais simples de inserir um componente
+
+      window.document.writeln('Olá Mundo');
+      document.write("<br>")
+     
+     // buscar configurações da página
+
+      window.document.writeln(window.document.charset);
+      document.write("<br>")
+      window.document.writeln(window.navigator.appName);
+      document.write("<br>")
+      window.document.writeln(window.document.URL);
+      document.write("<br>")
+      document.write("<br>")
+
+      //Formas de seleção
+
+      var corpo = window.document.body
+
+      var p1 = window.document.getElementsByName('p')[0]
+      window.alert('esta escrito' + p1.innerHTML)
+      p1.style.color = 'blue'
+
+      var d = window.document.getElementById('msg').innerText = 'Olá'
+      d.style.background = 'green'
+
+      var d = window.document.querySelector('div.msg')
+      d.style.color = 'blue'
+
+</script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Switch</title>
+  </head>
+  <body>
+    <h1>Dia da Semana Usando switch</h1>
+
+    <p id="resultado"></p>
+
+    <script>
+      var data = new Date(2022, 11, 18);
+      var dia = data.getDay();
+
+      document.getElementById("resultado").innerHTML = dia_da_semana(dia);
+
+      function dia_da_semana(dia) {
+        var resposta = "";
+        switch (dia) {
+          case 0:
+            resposta = "Domingo";
+            break;
+          case 1:
+            resposta = "Segunda-feira";
+            break;
+          case 2:
+            resposta = "Terça-feira";
+            break;
+          case 3:
+            resposta = "Quarta-feira";
+            break;
+          case 4:
+            resposta = "Quinta-feira";
+            break;
+          case 5:
+            resposta = "Sexta-feira";
+            break;
+          case 6:
+            resposta = "Sábado";
+            break;
+          default:
+            resposta = "Dia Inválido";
+        }
+
+        return resposta;
+      }
+    </script>
+  </body>
+</html>

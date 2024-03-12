@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>For</title>
+  </head>
+  <body>
+
+    <h1>Contagem</h1>
+
+    N: <input type="number" id="N1" value="" />
+    <button onclick="contagem('N1')">OK</button>
+    <p id="resultado"></p>
+
+    <script>
+      function contagem(entrada1) {
+        var texto = "";
+
+        var n = Number(document.getElementById(entrada1).value);
+        for (i = 1; i <= n; i++) {
+          texto = texto + i + "<br>";
+        }
+
+        document.getElementById("resultado").innerHTML = texto;
+      }
+    </script>
+  </body>
+</html>

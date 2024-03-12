@@ -1,0 +1,42 @@
+
+.lista {
+    background-color: bisque;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    text-align: center;
+    color: rgba(106, 16, 175, 0.781);
+}
+
+.dobro {
+    background-color: aqua;
+}
+
+h2 {
+    text-align: center;
+    color: blue;
+}
+
+.gato {
+    background-color: darkslategray;
+    text-align: center;
+}
+img {
+    width: 250px;
+    height: 250px;
+}
+
+.gato2 {
+  background-color:darkgoldenrod;
+  text-align: center;
+}
+
+.comp {
+  background-color: aquamarine;
+  text-align: center;
+}
